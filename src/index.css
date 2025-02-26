@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@font-face {
+    font-family: 'Droid Sans';
+    font-weight: normal;
+    src: url('./assets/fonts/DroidSans.ttf');
+}
+
+@font-face {
+    font-family: 'Droid Sans';
+    font-weight: bold;
+    src: url('./assets/fonts/DroidSans-Bold.ttf');
+}
+
+body {
+    background: #657C7D;
+    /* background: rgb(101,124,125); */
+    background: #fff;
+    /* background: linear-gradient(137deg, rgba(0,0,0,1) 0%, rgba(0,212,255,1) 100%); */
+    font-family: 'Roboto', sans-serif;
+}
+
+.swiper-container {
+    position: relative;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #000;
+}
+
+.c-swiper-button-next,
+.c-swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #000; /* Cambia el color según tus necesidades */
+}
+
+/* .header-fixed {
+    padding: 20px 40px;
+} */
+
+
+header {
+    box-shadow: 0px 0px 26px 8px rgba(0,0,0,.9);
+}
+
+header.header-fixed .menu {
+    display: none;
+}
+
+header.header-fixed .enlaces {
+    margin-top: 0;
+}
+
+label.active {
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.parallax::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateZ(-1px) scale(1.5);
+    background-size: 100%;
+    z-index: -1;
+}
+
+.bg::after {
+    background: linear-gradient(rgba(0,0,0.5), rgba(0,0,0,.5)), url('./assets/bg.jpg');
+    background-size: cover;
+}
+
+.contenedor-bg div {
+    position: relative;
+    display: flex;
+    transform-style: preserve-3d;
+}
+
+.contenedor-bg {
+    perspective: 2px;
+}
+
+.menu1.active {
+    transform: translateX(-100%);
+}
